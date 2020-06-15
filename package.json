@@ -1,0 +1,19 @@
+{
+  "name": "isomorphic",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "ts-node src/server",
+    "build": "webpack"
+  },
+  "dependencies": {
+    "@types/node": "^14.0.13",
+    "@types/webpack": "^4.41.17",
+    "ts-loader": "^7.0.5",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.5",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  }
+}
