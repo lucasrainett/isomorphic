@@ -1,0 +1,1 @@
+export type Component = (path: string, query: any, fetch: (url: string) => Promise<any>, state: any, render: () => void) => string

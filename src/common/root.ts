@@ -4,9 +4,9 @@ import {page1} from "./page1";
 import {page2} from "./page2";
 import {page3} from "./page3";
 import {error} from "./error";
+import {Component} from "./IComponent";
 
-
-const routes: {[key: string]: () => string} = {
+const routes: {[key: string]: Component} = {
     "/": home,
     "/page1": page1,
     "/page2": page2,
@@ -14,13 +14,12 @@ const routes: {[key: string]: () => string} = {
     "/error": error
 };
 
-export function root(path: string){
+export const root: Component = (path, query, fetch, state, render)  => {
     const pageComponent = routes[path] || routes["/error"];
-
 
     return `
         <div>
             ${menu()}
-            ${pageComponent()}
+            ${pageComponent(path, query, fetch, state, render)}
         </div>`
 }
